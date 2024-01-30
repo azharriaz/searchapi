@@ -10,16 +10,19 @@
 ## Getting Started
 
 1. Pull the Elastic Container image, to pull run `docker pull docker.elastic.co/elasticsearch/elasticsearch:8.12.0`.
+
 2. Run the container with command `docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "xpack.security.enabled=false" docker.elastic.co/elasticsearch/elasticsearch:8.12.0`.
+
 3. Verify elastic container is running, goto chrome search bar and try visiting "localhost:9200/_aliases".
+
 4. Edit the app.settings.json file inside the project CodingChallenge.Infrastructure.Api.
-4. Run the project migrations for sql server, open the package manager console in visual studio and run `dotnet ef migrations add "CreateDb" --project src\Common\CodingChallenge.Infrastructure.SqlServer --startup-project src\Apps\CodingChallenge.Api`. You should see Migrations folder inside project CodingChallenge.Infrastructure.SqlServer
-5. Run the project using IISExpress profile. Project will take some time, as it will take some time seeding the initial application data.
-6. Initial run will also create default `products` index on elastic search container.
-7. Download the postman collection from root of the project to test dynamic search.
+5. Run the project migrations for sql server, open the package manager console in visual studio and run `dotnet ef migrations add "CreateDb" --project src\Common\CodingChallenge.Infrastructure.SqlServer --startup-project src\Apps\CodingChallenge.Api`. You should see Migrations folder inside project CodingChallenge.Infrastructure.SqlServer
+6. Run the project using IISExpress profile. Project will take some time, as it will take some time seeding the initial application data.
+7. Initial run will also create default `products` index on elastic search container.
+8. Download the postman collection from root of the project to test dynamic search.
 
 
-Product Search API Details `api/products/search`:
+## Product Search API Details `api/products/search`:
 
 1. Api accepts json body and structure of body is below:
 
@@ -39,8 +42,10 @@ Product Search API Details `api/products/search`:
     }
   ],
   "pageSize": 50
-}`
+}`.
+
 2. `query` is the main search term. i.e. products will be fetched mainly based on the query string provided i.e. following fields will be scaned name, description, brand, product type.
+
 3. `criterias` are list of objects, and each object contains 
    i. `param` name of the field criteria to be applied on. Allowed values are {name, description, brand, type}.
    ii. `value` is string which is to be searched.
@@ -51,14 +56,6 @@ Product Search API Details `api/products/search`:
     ii. `order` is the data sorting order, Allowed values are {"asc", "desc"}.
 5. To test the search api import the collection in postman and run the `Login` request. Copy the jwt token from response body and paste into `SearchByQuery` request's Authorization section. 
 6. Edit the body section with desired value and hit Send button to see the results.
-
-1. Install the latest [.NET SDK](https://dotnet.microsoft.com/download)
-2. Run `dotnet new --install Matech.Clean.Architecture.Template` to install the project template
-3. Create a folder for your solution and cd into it (the template will use it as project name)
-4. Run `dotnet new cas` to create a new project
-5. Navigate to `src/Apps/CleanArchitecture.Api` and run `dotnet run` to launch the back end (ASP.NET Core Web API)
-6. Open web browser https://localhost:5021/api Swagger UI
-7. 
 
 ### Database Configuration
 
