@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "31441835-0bb2-4e13-a0f4-4f665a27172b",
+		"name": "ElasticSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4154802"
+	},
+	"item": [
+		{
+			"name": "SearchByQuery",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjRmOTViNzM4LWIwOGQtNDZlNi05ODQ1LWY4Nzk4Yzc4M2NjZiIsImp0aSI6IjZlNTJkMWRiLWFjNzQtNDU5ZC1hZGRjLTVkNDhhNDg4MWYzMSIsImV4cCI6MTcxNDQwMzMwMiwiaXNzIjoiVmFsaWRJc3N1ZXIiLCJhdWQiOiJWYWxpZEF1ZGllbmNlIn0.GyqSSIsPNKl1CIwbfjjSsezvDaP09SSWN0DWIIveTHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"ultricies\",\r\n  \"criterias\": [\r\n  ],\r\n  \"sorting\": [\r\n    {\r\n      \"field\": \"name\",\r\n      \"order\": \"asc\"\r\n    }\r\n  ],\r\n  \"pageSize\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:38646/api/Products/Search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "38646",
+					"path": [
+						"api",
+						"Products",
+						"Search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchByQueryByName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjRmOTViNzM4LWIwOGQtNDZlNi05ODQ1LWY4Nzk4Yzc4M2NjZiIsImp0aSI6IjZlNTJkMWRiLWFjNzQtNDU5ZC1hZGRjLTVkNDhhNDg4MWYzMSIsImV4cCI6MTcxNDQwMzMwMiwiaXNzIjoiVmFsaWRJc3N1ZXIiLCJhdWQiOiJWYWxpZEF1ZGllbmNlIn0.GyqSSIsPNKl1CIwbfjjSsezvDaP09SSWN0DWIIveTHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"ultricies\",\r\n  \"criterias\": [\r\n    {\r\n      \"param\": \"name\",\r\n      \"value\": \"Angular Speedster Board 2000\",\r\n      \"conjunction\": \"and\"\r\n    }\r\n  ],\r\n  \"sorting\": [\r\n    {\r\n      \"field\": \"name\",\r\n      \"order\": \"asc\"\r\n    }\r\n  ],\r\n  \"pageSize\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:38646/api/Products/Search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "38646",
+					"path": [
+						"api",
+						"Products",
+						"Search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchByQueryByNameAndBrand",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjRmOTViNzM4LWIwOGQtNDZlNi05ODQ1LWY4Nzk4Yzc4M2NjZiIsImp0aSI6IjZlNTJkMWRiLWFjNzQtNDU5ZC1hZGRjLTVkNDhhNDg4MWYzMSIsImV4cCI6MTcxNDQwMzMwMiwiaXNzIjoiVmFsaWRJc3N1ZXIiLCJhdWQiOiJWYWxpZEF1ZGllbmNlIn0.GyqSSIsPNKl1CIwbfjjSsezvDaP09SSWN0DWIIveTHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"ultricies\",\r\n  \"criterias\": [\r\n    {\r\n      \"param\": \"name\",\r\n      \"value\": \"Angular Speedster Board 2000\",\r\n      \"conjunction\": \"and\"\r\n    },\r\n    {\r\n      \"param\": \"brand\",\r\n      \"value\": \"Toyota\",\r\n      \"conjunction\": \"and\"\r\n    }\r\n  ],\r\n  \"sorting\": [\r\n    {\r\n      \"field\": \"name\",\r\n      \"order\": \"asc\"\r\n    }\r\n  ],\r\n  \"pageSize\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:38646/api/Products/Search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "38646",
+					"path": [
+						"api",
+						"Products",
+						"Search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjRmOTViNzM4LWIwOGQtNDZlNi05ODQ1LWY4Nzk4Yzc4M2NjZiIsImp0aSI6IjZlNTJkMWRiLWFjNzQtNDU5ZC1hZGRjLTVkNDhhNDg4MWYzMSIsImV4cCI6MTcxNDQwMzMwMiwiaXNzIjoiVmFsaWRJc3N1ZXIiLCJhdWQiOiJWYWxpZEF1ZGllbmNlIn0.GyqSSIsPNKl1CIwbfjjSsezvDaP09SSWN0DWIIveTHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Vue Js\",\r\n  \"description\": \"test description for newly added product, where price is 100 and brand id is 3\",\r\n  \"price\": 100,\r\n  \"brandId\": 3,\r\n  \"typeId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:38646/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "38646",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@test.com\",\r\n  \"password\": \"CCApi_1850\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:38646/api/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "38646",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

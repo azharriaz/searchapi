@@ -54,8 +54,10 @@
 4. `sorting` are list of objects, and each object contains
     i. `field` name of the field which is to be sorted by and Allowed values are {name, description, brand, type}.
     ii. `order` is the data sorting order, Allowed values are {"asc", "desc"}.
-5. To test the search api import the collection in postman and run the `Login` request. Copy the jwt token from response body and paste into `SearchByQuery` request's Authorization section. 
+5. To test the search api import the collection in postman `ElasticSearch.postman_collection.json` and run the `Login` request. Copy the jwt token from response body and paste into `SearchByQuery` request's Authorization section. 
 6. Edit the body section with desired value and hit Send button to see the results.
+
+## Gifs are attached in the same directory to help understand usage of API through postman collection.
 
 ### Database Configuration
 
